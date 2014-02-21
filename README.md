@@ -10,6 +10,8 @@ that rather than grind again to beef up, I would edit the game's save files.
 
 [Download for Mac OS X](https://dl.dropboxusercontent.com/u/473648/ultima1_save_editor-mac-os-x-2014-02-20.zip)
 
+[Download for Windows](https://dl.dropboxusercontent.com/u/473648/ultima1_save_editor_windows.zip)
+
 Usage
 -----
 
