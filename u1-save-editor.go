@@ -196,25 +196,29 @@ func main() {
 
   moves = bytesToUint32LE(saveFileBytes[172], saveFileBytes[173], saveFileBytes[174], saveFileBytes[175])
 
-  var nameString string
 
   fmt.Printf("name (%v): ", string(name[:]))
-  fmt.Scan(&nameString)
-  for i, _ := range nameString {
-    name[i] = nameString[i]
+  line, err := readLine()
+  if err != nil { return }
+
+  if strings.TrimSpace(line) != "" {
+    for i, _ := range line {
+      if i == 14 { break }
+      name[i] = line[i]
+    }
   }
 
-  strength, _ = readUint16(fmt.Sprintf("strength (%v): ", strength), true, strength)
-  agility, _ = readUint16(fmt.Sprintf("agility (%v): ", agility), true, agility)
-  stamina, _ = readUint16(fmt.Sprintf("stamina (%v): ", stamina), true, stamina)
-  charisma, _ = readUint16(fmt.Sprintf("charisma (%v): ", charisma), true, charisma)
-  wisdom, _ = readUint16(fmt.Sprintf("wisdom (%v): ", wisdom), true, wisdom)
+  strength, _     = readUint16(fmt.Sprintf("strength (%v): ", strength), true, strength)
+  agility, _      = readUint16(fmt.Sprintf("agility (%v): ", agility), true, agility)
+  stamina, _      = readUint16(fmt.Sprintf("stamina (%v): ", stamina), true, stamina)
+  charisma, _     = readUint16(fmt.Sprintf("charisma (%v): ", charisma), true, charisma)
+  wisdom, _       = readUint16(fmt.Sprintf("wisdom (%v): ", wisdom), true, wisdom)
   intelligence, _ = readUint16(fmt.Sprintf("intelligence (%v): ", intelligence), true, intelligence)
-  hitPoints, _ = readUint16(fmt.Sprintf("hitPoints (%v): ", hitPoints), true, hitPoints)
-  food, _ = readUint16(fmt.Sprintf("food (%v): ", food), true, food)
-  experience, _ = readUint16(fmt.Sprintf("experience (%v): ", experience), true, experience)
-  gold, _ = readUint16(fmt.Sprintf("gold (%v): ", gold), true, gold)
-  moves, _ = readUint32(fmt.Sprintf("moves (%v): ", moves), true, moves)
+  hitPoints, _    = readUint16(fmt.Sprintf("hit points (%v): ", hitPoints), true, hitPoints)
+  food, _         = readUint16(fmt.Sprintf("food (%v): ", food), true, food)
+  experience, _   = readUint16(fmt.Sprintf("experience (%v): ", experience), true, experience)
+  gold, _         = readUint16(fmt.Sprintf("gold (%v): ", gold), true, gold)
+  moves, _        = readUint32(fmt.Sprintf("moves (%v): ", moves), true, moves)
 
   var bytes [4]byte
 
