@@ -8,6 +8,8 @@ Ultima 1 is... different. You constantly need to grind for health and afer
 getting lost on level 5 of a dungeon and losing 5000 health and dying, I decided
 that rather than grind again to beef up, I would edit the game's save files.
 
+[Download for Mac OS X](https://dl.dropboxusercontent.com/u/473648/ultima1_save_editor-mac-os-x-2014-02-20.zip)
+
 Usage
 -----
 
