@@ -130,6 +130,7 @@ func main() {
 
   if *outputFilename == "" || inputFilename == "" {
     fmt.Println("usage: u1-save-editor -o <output file> <ultima 1 save file>")
+    os.Exit(-1)
   }
 
   saveFile, err := os.Open(inputFilename)
