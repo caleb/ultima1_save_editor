@@ -4,7 +4,7 @@ Ultima 1 Saved Game Editor
 I recently purchased the Ultima series from [gog](http://gog.com) and decided to
 play them from the beginning.
 
-Ultima 1 is... different. You constantly need to grind for health and afer
+Ultima 1 is... different. You constantly need to grind for health and after
 getting lost on level 5 of a dungeon and losing 5000 health and dying, I decided
 that rather than grind again to beef up, I would edit the game's save files.
 
